@@ -58,8 +58,8 @@
     <article>
 
         <header style="text-align: center;">
-            <h1>Audio+Video+Screen Sharing using RTCMultiConnection</h1>
-            <p>
+            <h1>Audio+Video+Screen Sharing(One-To-One)</h1>
+         <!--    <p>
                 <a href="https://rtcmulticonnection.herokuapp.com/">HOME</a>
                 <span> &copy; </span>
                 <a href="http://www.MuazKhan.com/" target="_blank">Muaz Khan</a> .
@@ -67,17 +67,17 @@
                 <a href="https://github.com/muaz-khan?tab=repositories" target="_blank" title="Github Profile">Github</a> .
                 <a href="https://github.com/muaz-khan/RTCMultiConnection/issues?state=open" target="_blank">Latest issues</a> .
                 <a href="https://github.com/muaz-khan/RTCMultiConnection/commits/master" target="_blank">What's New?</a>
-            </p>
+            </p> -->
         </header>
 
-        <div class="github-stargazers"></div>
+        <!-- <div class="github-stargazers"></div> -->
 
         <section class="experiment">
             <div class="make-center">
                 <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
-                <button id="open-room">Open Room</button>
-                <button id="join-room">Join Room</button>
-                <button id="open-or-join-room">Auto Open Or Join Room</button>
+                <button id="open-room">Technician create room</button>
+                <button id="join-room">Student join to room</button>
+                <!-- <button id="open-or-join-room">Auto Open Or Join Room</button> -->
                 
                 <hr>
                     <button id="share-screen" disabled>Share Screen</button>
@@ -129,14 +129,14 @@
                 connection.join(document.getElementById('room-id').value);
             };
 
-            document.getElementById('open-or-join-room').onclick = function() {
-                disableInputButtons();
-                connection.openOrJoin(document.getElementById('room-id').value, function(isRoomExists, roomid) {
-                    if(!isRoomExists) {
-                        showRoomURL(roomid);
-                    }
-                });
-            };
+            // document.getElementById('open-or-join-room').onclick = function() {
+            //     disableInputButtons();
+            //     connection.openOrJoin(document.getElementById('room-id').value, function(isRoomExists, roomid) {
+            //         if(!isRoomExists) {
+            //             showRoomURL(roomid);
+            //         }
+            //     });
+            // };
 
             // ......................................................
             // ..................RTCMultiConnection Code.............
@@ -212,7 +212,7 @@
             };
 
             function disableInputButtons() {
-                document.getElementById('open-or-join-room').disabled = true;
+                // document.getElementById('open-or-join-room').disabled = true;
                 document.getElementById('open-room').disabled = true;
                 document.getElementById('join-room').disabled = true;
                 document.getElementById('room-id').disabled = true;
@@ -293,7 +293,7 @@
             }
         </script>
 
-        <section class="experiment own-widgets latest-commits">
+     <!--    <section class="experiment own-widgets latest-commits">
             <h2 class="header" id="updates" style="color: red;padding-bottom: .1em;"><a href="https://github.com/muaz-khan/RTCMultiConnection/commits/master">Latest Updates</a></h2>
             <div id="github-commits"></div>
         </section>
@@ -312,7 +312,7 @@
         </section>
 
         <a href="https://github.com/muaz-khan/RTCMultiConnection" class="fork-left"></a>
-
+ -->
         <script>
             window.useThisGithubPath = 'muaz-khan/RTCMultiConnection';
         </script>
@@ -320,13 +320,13 @@
 
     </article>
 
-    <footer>
+    <!-- <footer>
         <p>
             <a href="https://www.webrtc-experiment.com">WebRTC Experiments</a> © <a href="https://plus.google.com/+MuazKhan" rel="author" target="_blank">Muaz Khan</a>
             <a href="mailto:muazkh@gmail.com" target="_blank">muazkh@gmail.com</a>
             <a href="https://github.com/muaz-khan" target="_blank">Github</a>
         </p>
-    </footer>
+    </footer> -->
 
 </body>
 
